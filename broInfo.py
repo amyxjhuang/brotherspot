@@ -14,16 +14,16 @@ ocations = ["blackwell", "unit 1", "unit 2", "unit 3",
 
 brotherLoc = {}
 
-def getInfo(str userInput):
+def getInfo(userInput):
     userInput = ["brother", "blackwell", 1200];
     uName = userInput[0]
     uLoc = userInput[1]
     uTime = userInput[2]
     if uLoc in locations:
         brotherLoc[uName] = [uLoc, uTime]
-        chat.postMessage("Added: " + uName + " has been spotted at " + uLoc + " at " + str(uTime)) 
+        chat.postMessage("Added: " + uName + " has been spotted at " + uLoc + " at " + str(uTime))
     else:
         return notInLoc(uLoc)
 
-def notInLoc(str s):
+def notInLoc(s):
     chat.postMessage("location is not in list")
